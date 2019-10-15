@@ -1,6 +1,6 @@
 # Sweet Functional Popup
 <p align="center">
-  <img src="https://i.imgyukle.com/2019/08/26/o5j820.png" width="200px" height="200px">
+  <img src="https://i.imgyukle.com/2019/10/15/ENwm8j.png" width="200px" height="200px">
 </p>
 
 # New Features!
