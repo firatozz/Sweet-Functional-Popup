@@ -1,5 +1,5 @@
 # Sweet Functional Popup
-<p align="center">
+<p align="left">
   <img src="https://i.imgyukle.com/2019/10/15/ENwm8j.png" width="200px" height="200px">
 </p>
 
