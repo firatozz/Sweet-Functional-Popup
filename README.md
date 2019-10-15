@@ -65,6 +65,7 @@ All options must be added to the init function as an object.
 | canScroll | Boolean | false | Scroll control of the back page after the popup is displayed.
 | customHTML | String | null | The custom HTML codes for the popup.
 | css | String | null | The CSS styles for the notification box. CSS can be added through this function or on the page itself.
+| transformDefault | String | null | You can use the transform property of CSS.
 | showAsExitIntent | Boolean | false | Popup works as exit intent.
 | cookieExp | Integer | 7 | The number of days to set the cookie for. A cookie is used to track if the notification box has already been shown to a specific visitor. If the notification box has been shown, it will not show again until the cookie expires. A value of 0 will always show the notification box.
 | showOncePerSession | Boolean | false | If true, the notification box will only show once per browser session. If false and cookieExp is set to 0, the notification box will show multiple times in a single browser session.
@@ -85,23 +86,24 @@ CAUTION !: The values are case sensivity, so the values must be entered correctl
 <!DOCTYPE html>
 <html>
 <head>
-    <script type="text/javascript" src="liteNotificationBox.min.js"></script>
+    <script type="text/javascript" src="sweetFunctionalPopup.min.js"></script>
 </head>
 <body></body>
 <script type="text/javascript">
- liteNotificationBox.init({
-        position: "bottomLeft",
-        animation: "bubble",
-        width: 200,
-        height: 200,
+var popUp = new sweetFunctionalPopup();
+    popUp.setOptions({
+        width: 400,
+        height: 400,
+        animation: "fade",
         imageUrl: "https://blog.addthiscdn.com/wp-content/uploads/2015/11/JS-360454.png",
         targetUrl: "github.com",
         targetOpenNewTab: true,
-        delay: 5,
-        css: ".ltImg{border-radius:10px;}",
+        delay: 3,
+        css: ".swImg{border-radius:10px;}",
         cookieExp: 7,
         showOncePerSession: false,
-    });
+        transformDefault: "scaleX(1)"
+});
 </script>
 </html>
 ```
