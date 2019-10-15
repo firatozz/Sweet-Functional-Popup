@@ -101,7 +101,7 @@ sweetFunctionalPopup.prototype.pageviewsCount = function () {
 
 sweetFunctionalPopup.prototype.addCSS = function () {
 
-    // Base CSS styles for the func popup box
+    // Base CSS styles for the func popup
     var css = document.createTextNode(
         ".swFuncPopup_bgEl{display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; opacity: 0.4; z-index: 10001;}" +
         ".swFunctionalPopup{display: block; position: fixed; width: " + this.width + "px; height: " + this.height + "px; z-index: 10002;" +
@@ -151,7 +151,7 @@ sweetFunctionalPopup.prototype.setAnimation = function () {
     }
 }
 
-// Add the popup to the pag
+// Add the popup to the page
 sweetFunctionalPopup.prototype.createPopUp = function () {
 
     // Add the background div
@@ -379,12 +379,3 @@ sweetFunctionalPopup.prototype.setOptions = function (options) {
         this.loadEvents();
     });
 }
-
-var popUp1 = new sweetFunctionalPopup();
-
-popUp1.setOptions({
-    width: 400,
-    height: 400,
-    animation: "fade",
-    transformDefault: "scaleX(1)"
-});
