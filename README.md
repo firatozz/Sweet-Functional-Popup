@@ -50,7 +50,7 @@ You can change CSS attirbutes on init function.
 
 # Options
 
-All options must be added to the init function as an object.
+If you do not use some options, the default option values will be used.
 
 | Option | Type | Default | Description 
 | ------ | ------ | ------ | ------ |
