@@ -16,7 +16,7 @@
  - Show once per session Option
  - Re-direct and new tab management
  
-  ### Demo Page
+ 
    <a href="https://firatozz.github.io/repo-pages/sweetFunctionalPopup.html" target="_blank">Demo</a>
 
 # Usage
