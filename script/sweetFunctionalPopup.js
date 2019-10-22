@@ -1,19 +1,19 @@
 function sweetFunctionalPopup(options) {
-    this.width = 300;
-    this.height = 300;
-    this.imageUrl = "https://blog.addthiscdn.com/wp-content/uploads/2015/11/JS-360454.png";
-    this.targetUrl = "www.google.com.tr";
-    this.targetOpenNewTab = true;
-    this.animation = "fade";
-    this.delay = 1;
-    this.autoClose = 0;
-    this.canScroll = false;
-    this.customHTML = "";
-    this.css = ".swFunctionalPopup.active, .swImg{border-radius:10px;}";
-    this.showAsExitIntent = false;
-    this.cookieExp = 7;
-    this.showOncePerSession = false;
-    this.showCountPageviews = 0;
+    this.width = 300; //OK
+    this.height = 300; // OK
+    this.imageUrl = "https://raw.githubusercontent.com/firatozz/firatozz.github.io/master/assets/img/javascript.png"; //OK
+    this.targetUrl = "www.google.com.tr"; // OK
+    this.targetOpenNewTab = true; // OK
+    this.animation = "fade"; // OK
+    this.delay = 1; // OK
+    this.autoClose = 0; // OK
+    this.canScroll = false; // OK
+    this.customHTML = ""; // OK
+    this.css = ".swFunctionalPopup.active, .swImg{border-radius:10px;}"; // OK
+    this.showAsExitIntent = false; // OK
+    this.cookieExp = 7; // OK
+    this.showOncePerSession = false; // OK
+    this.showCountPageviews = 0; // OK
 
     //PopUp Global Variables
     this.bgEl;
@@ -82,6 +82,9 @@ sweetFunctionalPopup.prototype.checkCookie = function () {
 }
 
 sweetFunctionalPopup.prototype.pageviewsCount = function () {
+    if (this.showCountPageviews > 0)
+        this.canScroll = true;
+
     if (this.showCountPageviews <= 0)
         return true;
 
@@ -101,7 +104,7 @@ sweetFunctionalPopup.prototype.pageviewsCount = function () {
 
 sweetFunctionalPopup.prototype.addCSS = function () {
 
-    // Base CSS styles for the func popup
+    // Base CSS styles for the func popup box
     var css = document.createTextNode(
         ".swFuncPopup_bgEl{display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; opacity: 0.4; z-index: 10001;}" +
         ".swFunctionalPopup{display: block; position: fixed; width: " + this.width + "px; height: " + this.height + "px; z-index: 10002;" +
@@ -151,7 +154,7 @@ sweetFunctionalPopup.prototype.setAnimation = function () {
     }
 }
 
-// Add the popup to the page
+// Add the popup to the pag
 sweetFunctionalPopup.prototype.createPopUp = function () {
 
     // Add the background div
@@ -244,6 +247,10 @@ sweetFunctionalPopup.prototype.showPopUp = function () {
     if (this.shown) return;
 
     if (this.pageviewsCount()) {
+        if (this.delay > 1) {
+            this.canScroll = true;
+        }
+
         setTimeout(() => {
             this.bgEl.style.display = "block";
             this.popupEl.className = "swFunctionalPopup active";
