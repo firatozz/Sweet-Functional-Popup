@@ -1,6 +1,6 @@
 # Sweet Functional Popup
 <p align="left">
-  <img src="https://i.imgyukle.com/2019/10/15/ENwm8j.png" width="200px" height="200px">
+  <img src="https://github.com/firatozz/firatozz.github.io/blob/master/assets/img/funcpopup.png" width="200px" height="200px">
 </p>
 
 # New Features!
